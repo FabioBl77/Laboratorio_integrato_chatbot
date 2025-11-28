@@ -15,7 +15,12 @@ class GroqClient:
         messages = [
             {
                 "role": "system",
-                "content": "You are an expert data analyst. Given a user request, output ONLY a BigQuery SQL query without explanations.",
+                "content": (
+                    "You are an expert data analyst. Return ONLY a valid BigQuery SQL query with no prose. "
+                    "Always use fully-qualified table names (project.dataset.table) and wrap them in backticks. "
+                    "If a table name contains spaces, keep the exact name inside backticks. "
+                    "Use only the tables provided in the context or, if absent, the default dataset."
+                ),
             },
             {
                 "role": "user",

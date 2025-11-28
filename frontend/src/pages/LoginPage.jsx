@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import api from "../services/api";
+import "../static/login.css";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -20,12 +21,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="grid two" style={{ alignItems: "center" }}>
+    <div className="grid two login-page">
       <div>
         <h1>Accedi</h1>
         <p>Entra per creare richieste SQL e visualizzare i grafici.</p>
       </div>
-      <form className="card" onSubmit={submit}>
+      <form className="card login-card" onSubmit={submit}>
         <div style={{ display: "grid", gap: "0.75rem" }}>
           <input
             className="input"

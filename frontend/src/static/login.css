@@ -1,0 +1,10 @@
+.login-page {
+  align-items: center;
+  justify-items: center;
+}
+
+.login-card {
+  max-width: 360px;
+  width: 100%;
+  justify-self: center;
+}
